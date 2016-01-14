@@ -1,7 +1,6 @@
 FROM ubuntu:trusty
 
-RUN apt-get update
-RUN apt-get -qy install icecast2 nginx
+RUN apt-get update && apt-get -qy install icecast2 nginx
 
 RUN rm -rf /etc/icecast2
 ADD etc/icecast2 /etc/icecast2
